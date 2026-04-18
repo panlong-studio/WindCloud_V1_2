@@ -1,0 +1,14 @@
+[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=ip value=127.0.0.1
+[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=port value=9090
+[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=log value=INFO
+[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=client_log value=client.log
+> /
+> 创建文件夹成功
+> 进入目录成功
+> /demo
+> 上传完成
+上传完成: local_upload.txt
+> 下载完成: local_upload.txt (16 字节)
+> 删除成功
+> (empty)
+> 再见！

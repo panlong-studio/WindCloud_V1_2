@@ -1,0 +1,30 @@
+[2026-04-18 23:04:14] [INFO] [src/server/server_socket.c:15 init_socket] server socket created fd=6
+[2026-04-18 23:04:14] [INFO] [src/server/server_socket.c:28 init_socket] server bind ip=127.0.0.1 port=9090
+[2026-04-18 23:04:14] [INFO] [src/server/server_socket.c:32 init_socket] server listen fd=6
+[2026-04-18 23:04:14] [INFO] [src/server/server.c:75 main] server started ip=127.0.0.1 port=9090
+[2026-04-18 23:04:15] [INFO] [src/server/server.c:124 main] accepted client fd=8
+[2026-04-18 23:04:15] [INFO] [src/server/worker.c:44 thread_func] worker thread=133271990036160 handling client fd=8
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=pwd payload_len=0
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:238 handle_pwd] fd=8 handling pwd current_path=/
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=mkdir payload_len=5
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:339 handle_mkdir] fd=8 mkdir success path=./upload/demo
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=cd payload_len=5
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:259 handle_cd] fd=8 cd success current_path=/demo
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=pwd payload_len=0
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:238 handle_pwd] fd=8 handling pwd current_path=/demo
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=puts payload_len=4104
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:439 handle_puts] fd=8 upload success path=./upload/demo/local_upload.txt size=16
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=gets payload_len=17
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:513 handle_gets] fd=8 download success path=./upload/demo/local_upload.txt size=16 resume=16
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=rm payload_len=17
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:322 handle_rm] fd=8 rm success path=./upload/demo/local_upload.txt
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:568 handle_request] fd=8 recv cmd=ls payload_len=0
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:305 handle_ls] fd=8 ls success path=/demo
+[2026-04-18 23:04:15] [INFO] [src/server/handle.c:564 handle_request] fd=8 disconnected while waiting for packet
+[2026-04-18 23:04:15] [INFO] [src/server/worker.c:48 thread_func] worker thread=133271990036160 finished client fd=8
+[2026-04-18 23:04:15] [INFO] [src/server/server.c:124 main] accepted client fd=8
+[2026-04-18 23:04:15] [INFO] [src/server/worker.c:44 thread_func] worker thread=133271981643456 handling client fd=8
+[2026-04-18 23:04:16] [INFO] [src/server/server.c:94 main] server received shutdown signal
+[2026-04-18 23:04:16] [INFO] [src/server/thread_pool.c:55 shutdown_active_fds] shutdown active client fd=8
+[2026-04-18 23:04:16] [INFO] [src/server/handle.c:564 handle_request] fd=8 disconnected while waiting for packet
+[2026-04-18 23:04:16] [INFO] [src/server/worker.c:48 thread_func] worker thread=133271981643456 finished client fd=8
