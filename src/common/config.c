@@ -18,7 +18,7 @@
  *   log=INFO
  */
 int get_target(char *key, char *value) {
-    FILE *file = fopen("./config/config.ini", "r");
+    FILE *file = fopen("../config/config.ini", "r");
 
     /*
      * 如果连配置文件都打不开，说明程序环境不完整，

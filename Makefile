@@ -7,6 +7,7 @@ LIBS    = -lpthread  # 看到你有 thread_pool.h，通常需要线程库
 SRC_DIR    = src
 INC_DIR    = include
 BUILD_DIR  = build
+BIN_DIR    = bin
 
 # 3. 源文件定位
 # 获取各个模块的 .c 文件
@@ -20,26 +21,29 @@ OBJS_CLIENT = $(SRCS_CLIENT:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 OBJS_SERVER = $(SRCS_SERVER:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 
 # 5. 最终生成的可执行文件名
-TARGET_CLIENT = client_app
-TARGET_SERVER = server_app
-TARGET_TEST_PROTOCOL = test_protocol_bin
+TARGET_CLIENT = $(BIN_DIR)/client_app
+TARGET_SERVER = $(BIN_DIR)/server_app
+TARGET_TEST_PROTOCOL = $(BIN_DIR)/test_protocol_bin
 
 # 默认执行全部编译
 all: $(TARGET_CLIENT) $(TARGET_SERVER)
 
 # 编译客户端：需要客户端自身的 .o 和公共部分的 .o
 $(TARGET_CLIENT): $(OBJS_CLIENT) $(OBJS_COMMON)
+	@mkdir -p $(BIN_DIR)
 	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
-	@echo "--- Client Build Success ---"
+	@echo "--- Client Build Success :$@---"
 
 # 编译服务端：需要服务端自身的 .o 和公共部分的 .o
 $(TARGET_SERVER): $(OBJS_SERVER) $(OBJS_COMMON)
+	@mkdir -p $(BIN_DIR)
 	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
-	@echo "--- Server Build Success ---"
+	@echo "--- Server Build Success :$@---"
 
 $(TARGET_TEST_PROTOCOL): tests/test_protocol.c $(BUILD_DIR)/common/protocol.o
-	$(CC) $(CFLAGS) -o $@ tests/test_protocol.c $(BUILD_DIR)/common/protocol.o $(LIBS)
-	@echo "--- Protocol Test Build Success ---"
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
+	@echo "--- Protocol Test Build Success :$@---"
 
 # 6. 模式规则：如何从 src 中的 .c 生成 build 中的 .o
 # $(BUILD_DIR)/%.o 对应 src/%.c
@@ -49,7 +53,7 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 
 # 7. 清理
 clean:
-	rm -rf $(BUILD_DIR) $(TARGET_CLIENT) $(TARGET_SERVER) $(TARGET_TEST_PROTOCOL)
+	rm -rf $(BUILD_DIR) $(BIN_DIR)
 	@echo "--- Clean Done ---"
 
 .PHONY: all clean test_protocol

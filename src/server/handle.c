@@ -21,7 +21,7 @@
  * 当前第一二期仍然是“单物理根目录”方案，
  * 所有客户端看到的虚拟路径，最终都映射到 ./upload 下面。
  */
-#define SERVER_BASE_DIR "./upload"
+#define SERVER_BASE_DIR "../tests"
 
 /*
  * send_text_reply:
