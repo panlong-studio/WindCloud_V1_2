@@ -1,5 +1,0 @@
-[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=ip value=127.0.0.1
-[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=port value=9090
-[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=log value=INFO
-[2026-04-18 23:04:15] [INFO] [src/common/config.c:38 get_target] config loaded key=client_log value=client.log
-> 
