@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
     load_value_or_default("ip", ip, sizeof(ip), "127.0.0.1");
     load_value_or_default("port", port, sizeof(port), "9090");
     load_value_or_default("log", log_level, sizeof(log_level), "INFO");
-    load_value_or_default("client_log", log_file, sizeof(log_file), "client.log");
+    load_value_or_default("client_log", log_file, sizeof(log_file), "../log/client.log");
 
     /*
      * 初始化日志模块。

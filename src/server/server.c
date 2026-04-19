@@ -71,7 +71,7 @@ int main(void) {
     load_value_or_default("ip", ip, sizeof(ip), "127.0.0.1");
     load_value_or_default("port", port, sizeof(port), "9090");
     load_value_or_default("log", log_level, sizeof(log_level), "INFO");
-    load_value_or_default("server_log", log_file, sizeof(log_file), "server.log");
+    load_value_or_default("server_log", log_file, sizeof(log_file), "../log/server.log");
 
     /*
      * 先初始化日志，再做后续动作。
