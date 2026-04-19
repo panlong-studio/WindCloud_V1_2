@@ -1,8 +1,7 @@
-[2026-04-18 23:04:15] [INFO] [src/client/client_socket.c:15 init_socket] client socket created fd=4
-[2026-04-18 23:04:15] [INFO] [src/client/client_socket.c:28 init_socket] client connect ip=127.0.0.1 port=9090
-[2026-04-18 23:04:15] [INFO] [src/client/client.c:50 main] client connected ip=127.0.0.1 port=9090
-[2026-04-18 23:04:15] [INFO] [src/client/client_command_handle.c:185 handle_puts] puts success file=local_upload.txt
-[2026-04-18 23:04:15] [INFO] [src/client/client_command_handle.c:288 handle_gets] gets success file=local_upload.txt size=16
-[2026-04-18 23:04:15] [INFO] [src/client/client_socket.c:15 init_socket] client socket created fd=4
-[2026-04-18 23:04:15] [INFO] [src/client/client_socket.c:28 init_socket] client connect ip=127.0.0.1 port=9090
-[2026-04-18 23:04:15] [INFO] [src/client/client.c:50 main] client connected ip=127.0.0.1 port=9090
+[2026-04-19 13:29:32] [INFO] [src/client/client_socket.c:23 init_socket] client socket created fd=4
+[2026-04-19 13:29:32] [INFO] [src/client/client_socket.c:57 init_socket] client connect ip=127.0.0.1 port=9090
+[2026-04-19 13:29:32] [INFO] [src/client/client.c:83 main] client connected ip=127.0.0.1 port=9090
+[2026-04-19 13:30:52] [INFO] [src/client/client_socket.c:23 init_socket] client socket created fd=4
+[2026-04-19 13:30:52] [INFO] [src/client/client_socket.c:57 init_socket] client connect ip=127.0.0.1 port=9090
+[2026-04-19 13:30:52] [INFO] [src/client/client.c:83 main] client connected ip=127.0.0.1 port=9090
+[2026-04-19 13:31:18] [INFO] [src/client/client_command_handle.c:482 handle_gets] gets success file=big_file.txt size=471490719
